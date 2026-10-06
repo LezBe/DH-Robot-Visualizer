@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dh-robot-visualizer
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn dh_web:server
+    autoDeploy: true
